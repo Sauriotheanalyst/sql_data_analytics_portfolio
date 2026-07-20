@@ -13,7 +13,7 @@ FROM (
       sales_month, 
         SUM(sales) AS Total_sales
   FROM retail_sales
-  WHERE kind_of_business IN ("Men's clothing stores", "Women's clothing stores)
+  WHERE kind_of_business IN ("Men's clothing stores", "Women's clothing stores")
   GROUP BY 1,2
   ORDER BY 4 DESC ) AS Sub_table
 
