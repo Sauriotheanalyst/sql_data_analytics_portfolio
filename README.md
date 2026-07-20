@@ -1,3 +1,4 @@
+```sql
 
 -- In here we can analyze data from a sub table which filters information from the main table according to the exact catheroty we want to see
 
@@ -17,3 +18,4 @@ FROM (
   ORDER BY 4 DESC ) AS Sub_table
 
 GROUP BY 1, 2;    
+```
