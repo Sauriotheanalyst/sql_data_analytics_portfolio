@@ -15,7 +15,7 @@ FROM (
   FROM retail_sales
   WHERE kind_of_business IN ("Men's clothing stores", "Women's clothing stores")
   GROUP BY 1,2
-  ORDER BY 4 DESC ) AS Sub_table
+  ORDER BY 3 DESC ) AS Sub_table
 
 GROUP BY 1, 2;    
 ```
