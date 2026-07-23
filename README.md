@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/Language-SQL-blue) 
 ![Database](https://img.shields.io/badge/Database-MySQL-orange) 
-![Focus](https://img.shields.io/badge/Focus-Data_Analysis_%26_Time_Series-green)
+![Focus](https://img.shields.io/badge/Focus-Data_Analysis)
 
 ---
 
