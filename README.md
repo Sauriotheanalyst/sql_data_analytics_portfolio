@@ -32,5 +32,63 @@ To import the database and run the queries locally:
 2. Execute the dataset script located in `/data/schema_and_data.sql` inside your preferred SQL engine.
 
 ```sql
--- Structure overview for the primary dataset
-DESCRIBE retail_sales;
+-- One of the first needed things is to verify the range, dates and volumn on the dataset
+
+SELECT 
+    MIN(sales_month) AS earliest_date, 
+    MAX(sales_month) AS latest_date,
+    COUNT(*) AS total_records 
+FROM retail_sales;
+
+-- Finding frequencies
+-- In this example I'm analyzing "kind_of_business", however under the same logic I can just update the column
+-- and see how any record is performing.
+
+SELECT
+    kind_of_business,
+    COUNT(*) AS total_records
+FROM retail_sales
+GROUP BY 1
+ORDER BY 2 DESC;
+
+-- This is an example of how SQL can be used to organize data in measurable metrics to start understanding the numbers
+
+SELECT
+  total_sales,
+  COUNT(*)
+FROM (
+  SELECT
+      sales_month,
+      SUM(sales) AS total_sales
+  FROM retail_sales
+  GROUP BY 1) AS sub_table
+GROUP BY 1
+ORDER BY 1 ASC
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
